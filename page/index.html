@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomotimer</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-logo">
+      <img class="logo-image" src="images/logo.svg" alt="Логотип">
+    </div>
+    <nav>
+      <ul class="header-menu">
+        <li>
+          <button id="resetButton" class="menu-item">
+            <img class="img-size" src="images/reset.svg" alt="Сброс">
+          </button>
+        </li>
+        <li>
+          <button id="settingsButton" class="menu-item">
+            <img class="img-size" src="images/setting.svg" alt="Настройки">
+          </button>
+        </li>
+        <li>
+          <button id="tasksButton" class="menu-item last">
+            <img class="img-size" src="images/list.svg" alt="Задачи">
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="main-arrow">
+
+    </div>
+    <div class="main-pomodoro">
+      <img class="pomodoro-size" src="images/pomodoro.svg" alt="Таймер-помодоро">
+      <div class="text">
+        <p id="timerLabel" class="timer-number">25:00</p>
+        <button id="startButton" class="start-timer">click me</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    footer
+    <div class="page-position"></div>
+  </footer>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
