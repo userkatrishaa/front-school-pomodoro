@@ -38,20 +38,37 @@
 
   <main class="main">
     <div class="main-arrow">
-
+      <img class="arrow-size left" src="images/arrow-left.svg" alt="Стрелка влево">
+      <img class="arrow-size right" src="images/arrow-right.svg" alt="Стрелка вправо">
     </div>
     <div class="main-pomodoro">
-      <img class="pomodoro-size" src="images/pomodoro.svg" alt="Таймер-помодоро">
+      <img class="pomodoro-size" src="images/pomodoro1.svg" alt="Таймер помодоро">
       <div class="text">
         <p id="timerLabel" class="timer-number">25:00</p>
         <button id="startButton" class="start-timer">click me</button>
       </div>
     </div>
+
+    <div id="modal-window" class="modal">
+      <div class="modal-box">
+        <button id="close-modal-btn" class="modal-close">
+          <img class="close-icon-size" src="images/close-cross.svg" alt="Крестик">
+        </button>
+        <h1>Настройки</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Fuga maiores eos reiciendis eius saepe accusantium asperiores quasi
+          repellendus est sapiente culpa, voluptates doloribus.</p>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">
-    footer
-    <div class="page-position"></div>
+    <div class="page-position">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
   </footer>
   <script src="scripts/script.js"></script>
 </body>
