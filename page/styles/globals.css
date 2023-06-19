@@ -44,6 +44,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
+  overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: var(--accent-color) var(--main-color);
   background-color: var(--main-color);
