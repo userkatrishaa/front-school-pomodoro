@@ -240,6 +240,71 @@
   transform: scale(1);
 }
 
+.divider {
+  width: 100%;
+  height: 0px;
+  opacity: 0.4;
+  border: 1px solid var(--white-color);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.modal-text {
+  font-family: 'Redcollar';
+  font-size: 2.3vmin;
+  margin-top: 1vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8vh;
+}
+
+.input-style {
+  max-width: 18vh;
+  min-width: 90px;
+  height: 45px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-family: 'Redcollar';
+  text-align: center;
+}
+
+.save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.save-btn {
+  max-width: 18vw;
+  min-width: 90px;
+  width: 220px;
+  height: 45px;
+  color: var(--white-color);
+  font-size: 2.2vmin;
+  font-family: 'Redcollar';
+  text-align: center;
+  background: none;
+  border-radius: 15px;
+  border: 2px solid var(--white-color);
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  transform: scale(0.95);
+  color: var(--base-color);
+  background-color: var(--white-color);
+  transition: all .3s ease-in-out;
+}
+
 .footer {
   display: flex;
   align-items: flex-start;
