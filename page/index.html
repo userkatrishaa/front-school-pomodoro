@@ -55,10 +55,37 @@
           <img class="close-icon-size" src="images/close-cross.svg" alt="Крестик">
         </button>
         <h1>Настройки</h1>
+        <div class="divider"></div>
+        <p class="modal-text">Настройте время таймера-помодоро, а также короткого или длинного перерыва</p>
+        <div class="wrapper">
+          <h2>Таймер</h2>
+          <input class="input-style" type="number"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" />
+        </div>
+        <div class="wrapper">
+          <h2>Короткий перерыв</h2>
+          <input class="input-style" type="number"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" />
+        </div>
+        <div class="wrapper">
+          <h2>Длинный перерыв</h2>
+          <input class="input-style" type="number"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" />
+        </div>
+        <div class="save-button">
+          <button id="save-modal-btn" class="save-btn">Сохранить</button>
+        </div>
+      </div>
+    </div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Fuga maiores eos reiciendis eius saepe accusantium asperiores quasi
-          repellendus est sapiente culpa, voluptates doloribus.</p>
+    <div id="modal-window-tasks" class="modal">
+      <div class="modal-box">
+        <button id="close-modal-tasks-btn" class="modal-close">
+          <img class="close-icon-size" src="images/close-cross.svg" alt="Крестик">
+        </button>
+        <h1>Упс :(</h1>
+        <p class="modal-text">На данном этапе разработки вы не можете добавить задачи для вашего таймера. Но мы уже
+          работаем над этим!</p>
       </div>
     </div>
   </main>
