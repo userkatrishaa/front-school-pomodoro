@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomotimer</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-logo">
+      <img class="logo-image" src="images/logo.svg" alt="Логотип">
+    </div>
+    <nav>
+      <ul class="header-menu">
+        <li>
+          <button id="resetButton" class="menu-item">
+            <img class="img-size" src="images/reset.svg" alt="Сброс">
+          </button>
+        </li>
+        <li>
+          <button id="settingsButton" class="menu-item">
+            <img class="img-size" src="images/setting.svg" alt="Настройки">
+          </button>
+        </li>
+        <li>
+          <button id="tasksButton" class="menu-item last">
+            <img class="img-size" src="images/list.svg" alt="Задачи">
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="main-arrow">
+      <img class="arrow-size left" src="images/arrow-left.svg" alt="Стрелка влево">
+      <img class="arrow-size right" src="images/arrow-right.svg" alt="Стрелка вправо">
+    </div>
+    <div class="main-pomodoro">
+      <img class="pomodoro-size" src="images/pomodoro1.svg" alt="Таймер помодоро">
+      <div class="text">
+        <p id="timerLabel" class="timer-number">25:00</p>
+        <button id="startButton" class="start-timer">click me</button>
+      </div>
+    </div>
+
+    <div id="modal-window" class="modal">
+      <div class="modal-box">
+        <button id="close-modal-btn" class="modal-close">
+          <img class="close-icon-size" src="images/close-cross.svg" alt="Крестик">
+        </button>
+        <h1>Настройки</h1>
+        <div class="divider"></div>
+        <p class="modal-text">Настройте время таймера-помодоро, а также короткого или длинного перерыва</p>
+        <div class="wrapper">
+          <h2>Таймер</h2>
+          <input class="input-style" type="number"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" />
+        </div>
+        <div class="wrapper">
+          <h2>Короткий перерыв</h2>
+          <input class="input-style" type="number"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" />
+        </div>
+        <div class="wrapper">
+          <h2>Длинный перерыв</h2>
+          <input class="input-style" type="number"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" />
+        </div>
+        <div class="save-button">
+          <button id="save-modal-btn" class="save-btn">Сохранить</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-window-tasks" class="modal">
+      <div class="modal-box">
+        <button id="close-modal-tasks-btn" class="modal-close">
+          <img class="close-icon-size" src="images/close-cross.svg" alt="Крестик">
+        </button>
+        <h1>Упс :(</h1>
+        <p class="modal-text">На данном этапе разработки вы не можете добавить задачи для вашего таймера. Но мы уже
+          работаем над этим!</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="page-position">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </footer>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>

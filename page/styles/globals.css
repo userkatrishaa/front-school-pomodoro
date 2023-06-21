@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Redcollar";
+  src: url("../fonts/Redcollar.woff2") format("woff2"),
+    url("../fonts/Redcollar.woff") format("woff"),
+    url("../fonts/Redcollar.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TT Commons";
+  src: url("../fonts/TT_Commons_Regular.woff2") format("woff2"),
+    url("../fonts/TT_Commons_Regular.woff") format("woff"),
+    url("../fonts/TT_Commons_Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --main-color: #1E1E1E;
+  --base-color: #141516;
+  --base-color-shadow: #141516 40%;
+  --accent-color: #F51B1B;
+  --white-color: white;
+}
+
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--main-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--main-color);
+  background-color: var(--main-color);
+  color: var(--white-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+h1,
+h2 {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  font-family: 'Redcollar';
+  font-weight: normal;
+}
+
+p {
+  font-family: 'TT Commons';
+  font-style: normal;
+  font-weight: 400;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
