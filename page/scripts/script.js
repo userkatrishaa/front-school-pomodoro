@@ -48,7 +48,8 @@ function pauseTimer() {
 
 function resetTimer() {
   clearInterval(timerInterval);
-  remainingTimes[currentIndex] = pomodoroDurations[currentIndex];
+  remainingTimes[currentIndex] = parseInt(timerInputs[currentIndex].value) * 60;
+
   timerLabel.textContent = formatTime(remainingTimes[currentIndex]);
   isTimerRunning = false;
   startButton.textContent = 'click me';
@@ -73,9 +74,7 @@ var pomodoroImages = [
 ];
 var pomodoroImage = document.querySelector('.pomodoro-size');
 
-var pomodoroDurations = [1500, 300, 900];
 var pomodoroLabels = ['25:00', '5:00', '15:00'];
-// var pomodoroColors = ['#FFFFFF', '#FFFFFF', '#FFFFFF']; // Цвета для каждого помидора
 
 function changePomodoroImageLeft(direction) {
   if (direction === 'left') {
@@ -89,8 +88,7 @@ function changePomodoroImageLeft(direction) {
     pomodoroImage.classList.remove('slide-out-left');
 
     timerLabel.textContent = pomodoroLabels[currentIndex];
-    // startButton.style.color = pomodoroColors[currentIndex];
-    // timerLabel.style.color = pomodoroColors[currentIndex];
+    pomodoroImage.alt = pomodoroLabels[currentIndex];
 
     resetTimer();
     var dots = document.querySelectorAll('.dot');
@@ -116,8 +114,6 @@ function changePomodoroImageRight(direction) {
     pomodoroImage.classList.remove('slide-out');
 
     timerLabel.textContent = pomodoroLabels[currentIndex];
-    // startButton.style.color = pomodoroColors[currentIndex];
-    // timerLabel.style.color = pomodoroColors[currentIndex];
 
     resetTimer();
     var dots = document.querySelectorAll('.dot');
@@ -146,18 +142,49 @@ var firstDot = document.querySelector('.dot');
 firstDot.classList.add('active');
 
 var settingsButton = document.getElementById('settingsButton');
+var tasksButton = document.getElementById('tasksButton');
 var closeButton = document.getElementById('close-modal-btn');
+var closeTasksButton = document.getElementById('close-modal-tasks-btn');
 
 settingsButton.addEventListener('click', function () {
-  document.getElementById('modal-window').classList.add('open')
+  document.getElementById('modal-window').classList.add('open');
+});
+
+tasksButton.addEventListener('click', function () {
+  document.getElementById('modal-window-tasks').classList.add('open');
 });
 
 closeButton.addEventListener('click', function () {
   document.getElementById('modal-window').classList.remove('open');
 });
 
+closeTasksButton.addEventListener('click', function () {
+  document.getElementById('modal-window-tasks').classList.remove('open');
+});
+
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
-    document.getElementById('modal-window').classList.remove('open')
+    document.getElementById('modal-window').classList.remove('open');
   }
+});
+
+var timerInputs = document.querySelectorAll('.input-style');
+var saveButton = document.getElementById('save-modal-btn');
+
+timerInputs[0].value = 25;
+timerInputs[1].value = 5;
+timerInputs[2].value = 15;
+
+saveButton.addEventListener('click', function () {
+  remainingTimes[0] = parseInt(timerInputs[0].value) * 60;
+  remainingTimes[1] = parseInt(timerInputs[1].value) * 60;
+  remainingTimes[2] = parseInt(timerInputs[2].value) * 60;
+
+  pomodoroLabels[0] = timerInputs[0].value + ':00';
+  pomodoroLabels[1] = timerInputs[1].value + ':00';
+  pomodoroLabels[2] = timerInputs[2].value + ':00';
+  timerLabel.textContent = pomodoroLabels[currentIndex];
+  resetTimer();
+
+  document.getElementById('modal-window').classList.remove('open');
 });
