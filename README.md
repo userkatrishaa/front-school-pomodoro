@@ -5,7 +5,7 @@
 
 ## Документация
 
-- [Веб-страница]()
+- [Веб-страница](https://userkatrishaa.github.io/front-school-pomodoro/)
 - [Требования к верстке](documentation/Requirements_pomodoro.pdf)
 - [Итоги работы](documentation/Results_of_work_pomodoro.pdf)
 
